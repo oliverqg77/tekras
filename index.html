@@ -1,1 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Company — Solutions that move your business</title>
+  <meta name="description" content="Your Company provides X services to help clients achieve Y. Contact us for a free quote." />
+  <meta property="og:title" content="Your Company — Solutions that move your business" />
+  <meta property="og:description" content="Your Company provides X services to help clients achieve Y." />
+  <meta name="theme-color" content="#0b6efd" />
+  <style>
+    :root{
+      --bg:#f7f9fc; --card:#fff; --accent:#0b6efd; --muted:#6b7280; --radius:12px;
+      --maxw:1100px; --gap:24px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;background:var(--bg);color:#0b1220;line-height:1.45}
+    .container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+    header{background:transparent;padding:18px 0}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{font-weight:700;font-size:1.1rem}
+    nav ul{display:flex;gap:14px;list-style:none;padding:0;margin:0;align-items:center}
+    nav a{color:inherit;text-decoration:none;font-weight:500}
+    .cta{background:var(--accent);color:white;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:600}
+    .hero{display:grid;grid-template-columns:1fr;gap:28px;align-items:center;padding:44px 0}
+    .hero .lead{font-size:1.9rem;font-weight:700;margin:0}
+    .hero p{margin:12px 0 0;color:var(--muted);max-width:620px}
+    .buttons{display:flex;gap:12px;margin-top:18px;flex-wrap:wrap}
+    .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:28px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(11,13,20,0.06)}
+    .services{padding:20px 0}
+    .testimonials{padding:18px 0}
+    .contact{background:linear-gradient(180deg,#fff,#f6fbff);padding:28px;border-radius:12px;margin-top:20px}
+    footer{padding:30px 0;color:var(--muted);font-size:0.95rem}
+    form input, form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef8;background:white}
+    label{display:block;font-size:0.85rem;margin-bottom:6px;color:#213547}
+    @media(min-width:900px){
+      .hero{grid-template-columns:1fr 420px;gap:48px}
+      .hero .lead{font-size:2.2rem}
+    }
+    /* mobile nav */
+    .menu-btn{display:none; background:none;border:0;font-size:20px}
+    @media(max-width:720px){
+      nav ul{display:none;position:absolute;right:18px;top:64px;background:var(--card);padding:12px;border-radius:10px;box-shadow:0 12px 30px rgba(11,13,20,0.08)}
+      .menu-btn{display:block}
+      nav.open ul{display:flex;flex-direction:column;gap:8px}
+    }
+  </style>
+</head>
+<body>
+  <header class="container">
+    <div class="nav" role="navigation" aria-label="Main">
+      <div class="brand">Your<span style="color:var(--accent)">Company</span></div>
+      <nav id="mainnav">
+        <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="navlist">☰</button>
+        <ul id="navlist" role="menubar">
+          <li role="none"><a role="menuitem" href="#services">Services</a></li>
+          <li role="none"><a role="menuitem" href="#about">About</a></li>
+          <li role="none"><a role="menuitem" href="#contact">Contact</a></li>
+          <li role="none"><a class="cta" href="#contact">Get a quote</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container" id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <h1 id="hero-title" class="lead">We help businesses grow with practical, measurable solutions</h1>
+        <p>Professional services in X, Y and Z—built on experience and driven by results. We focus on outcomes that matter for your bottom line.</p>
+        <div class="buttons">
+          <a class="cta" href="#contact">Get a quote</a>
+          <a href="#services" style="padding:10px 14px;border-radius:10px;border:1px solid #dbeafe;text-decoration:none;font-weight:600">Our services</a>
+        </div>
+
+        <div class="services" id="services">
+          <div class="card-grid">
+            <article class="card" aria-labelledby="s1">
+              <h3 id="s1">Service One</h3>
+              <p style="color:var(--muted);margin-top:8px">Short benefit-driven description of the service and what client gains.</p>
+            </article>
+            <article class="card" aria-labelledby="s2">
+              <h3 id="s2">Service Two</h3>
+              <p style="color:var(--muted);margin-top:8px">Short benefit-driven description for the second service.</p>
+            </article>
+            <article class="card" aria-labelledby="s3">
+              <h3 id="s3">Service Three</h3>
+              <p style="color:var(--muted);margin-top:8px">Short benefit-driven description for the third service.</p>
+            </article>
+          </div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card" style="position:sticky;top:20px">
+          <h3>Ready to start?</h3>
+          <p style="color:var(--muted)">Contact us for a complimentary consultation — no obligation.</p>
+          <div style="margin-top:12px">
+            <a class="cta" href="#contact" style="display:inline-block;width:100%;text-align:center">Request quote</a>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="testimonials" id="about" aria-labelledby="about-title">
+      <h2 id="about-title">What clients say</h2>
+      <div style="margin-top:12px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px">
+        <blockquote class="card" cite="#">
+          <p style="margin:0 0 8px">“Excellent service — increased our conversions and saved time.”</p>
+          <footer style="color:var(--muted)">— Client Name, Company</footer>
+        </blockquote>
+        <blockquote class="card" cite="#">
+          <p style="margin:0 0 8px">“Professional, quick, and reliable.”</p>
+          <footer style="color:var(--muted)">— Another Client</footer>
+        </blockquote>
+      </div>
+    </section>
+
+    <section id="contact" aria-labelledby="contact-title" class="contact">
+      <h2 id="contact-title">Contact us</h2>
+      <p style="color:var(--muted)">Fill this form and we'll get back within one business day.</p>
+      <form id="contactForm" style="margin-top:12px" novalidate>
+        <div style="display:grid;gap:10px">
+          <label for="name">Full name</label>
+          <input id="name" name="name" required />
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required />
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+          <button type="submit" class="cta" style="width:fit-content">Send message</button>
+          <div id="formMsg" aria-live="polite" style="color:var(--muted)"></div>
+        </div>
+      </form>
+    </section>
+
+    <footer class="container" style="margin-top:28px">
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px">
+        <div>© <strong>YourCompany</strong> · All rights reserved</div>
+        <div style="color:var(--muted)">Privacy · Terms · Sitemap</div>
+      </div>
+    </footer>
+  </main>
+
+  <script>
+    // Mobile nav toggle
+    const btn = document.getElementById('menuBtn');
+    const nav = document.getElementById('mainnav');
+    btn.addEventListener('click', () => {
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      nav.classList.toggle('open');
+    });
+
+    // Simple form handler (replace submit action with your endpoint)
+    const form = document.getElementById('contactForm');
+    const msg = document.getElementById('formMsg');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      msg.textContent = 'Sending…';
+      // Replace the block below with a real submission, e.g. fetch to your API or Formspree endpoint.
+      try {
+        // Example: await fetch('https://formspree.io/f/yourid', { method:'POST', body:new FormData(form) });
+        await new Promise(r => setTimeout(r, 800)); // simulate
+        msg.textContent = 'Thanks! Your message was sent.';
+        form.reset();
+      } catch (err) {
+        msg.textContent = 'Sorry — something went wrong. Please email hello@yourcompany.com';
+      }
+    });
+  </script>
+</body>
+</html>
 
